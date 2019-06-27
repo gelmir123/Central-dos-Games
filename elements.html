@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Central dos Games</title>
+    <link rel="icon" href="img/pac.png">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- animate CSS -->
+    <link rel="stylesheet" href="css/animate.css">
+    <!-- owl carousel CSS -->
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <!-- themify CSS -->
+    <link rel="stylesheet" href="css/themify-icons.css">
+    <!-- flaticon CSS -->
+    <link rel="stylesheet" href="css/flaticon.css">
+    <!-- font awesome CSS -->
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <!-- swiper CSS -->
+    <link rel="stylesheet" href="css/slick.css">
+    <!-- style CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!--::menu começo::-->
+    <header class="main_menu">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-12">
+                    <nav class="navbar navbar-expand-lg navbar-light">
+                        <a class="navbar-brand" href="index.html"> </a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                        <div class="collapse navbar-collapse main-menu-item justify-content-end"
+                            id="navbarSupportedContent">
+                            <ul class="navbar-nav">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="index.html">Página Inicial </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="about.html">Sobre nós</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="blog.html">
+                                        Notícias
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="blog.html">Blog</a>
+                                        <a class="dropdown-item" href="single-blog.html">Single blog</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="project.html">
+                                        Projetos
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="project.html">Project</a>
+                                        <a class="dropdown-item" href="project_details.html">Project Details</a>
+                                        <a class="dropdown-item" href="service.html">Services</a>
+                                        <a class="dropdown-item" href="elements.html">Elements</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="contact.html">Fale conosco</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- menu final-->
+
+    <!-- texto banner começo-->
+    <section class="breadcrumb breadcrumb_bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="breadcrumb_iner text-center">
+                        <div class="breadcrumb_iner_item">
+                            <h2>Projeto Elevador</h2>
+                            <p>Projetos<span>-</span>Códigos</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- texto banner final-->
+
+    <!-- começo do projeto -->
+    <section class="project_details">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 col-sm-12">
+                    <div class="project_details_img">
+                        <img src="img/loterica.jpg" alt="single_project">
+                    </div>
+                </div>
+                <div class="col-lg-7 col-sm-8">
+                    <div class="project_details_content">
+                        <h3>Consiste basicamente em sortear números</h3>
+                        <p>O programa irá simplismente sortear 6 números, automaticamente irá apresentar
+							esse números em ordem crescente.
+                        </p>
+                        <h4>Código Principal</h4>
+                        <p>import java.util.Random;
+
+								public class MelhoriaMegaSena {
+									public static void main(String[] args) {
+										Random sorteio = new Random();
+										int num = sorteio.nextInt(60);
+										int menor1 = 0, menor2 = 0, menor3 = 0, menor4 = 0, menor5 = 0, menor6 = 0;
+										while (num == 0) {
+											num = sorteio.nextInt(60);
+											menor1 = num;
+										}
+										menor1 = num;
+										num = sorteio.nextInt(60);
+										while (num == 0 || num == menor1) {
+											num = sorteio.nextInt(60);
+										}
+										if (num < menor1) {
+											menor2 = menor1;
+											menor1 = num;
+										} else {
+											menor2 = num;
+										}
+										num = sorteio.nextInt(60);
+										while (num == menor1 || num == menor2 || num == 0) {
+											num = sorteio.nextInt(60);
+										}
+										menor3 = num;
+										if (num < menor1) {
+											menor3 = menor2;
+											menor2 = menor1;
+											menor1 = num;
+										} else if (num < menor2) {
+											menor3 = menor2;
+											menor2 = num;
+										}
+										num = sorteio.nextInt(60);
+										while (num == menor1 || num == menor2 || num == menor3 || num == 0) {
+											num = sorteio.nextInt(60);
+										}
+										menor4 = num;
+										if (num < menor1) {
+											menor4 = menor3;
+											menor3 = menor2;
+											menor2 = menor1;
+											menor1 = num;
+										} else if (num < menor2) {
+											menor4 = menor3;
+											menor3 = menor2;
+											menor2 = num;
+										} else if (num < menor3) {
+											menor4 = menor3;
+											menor3 = num;
+										}
+										num = sorteio.nextInt(60);
+										while (num == menor1 || num == menor2 || num == menor3 || num == menor4 || num == 0) {
+											num = sorteio.nextInt(60);
+										}
+										menor5 = num;
+										if (num < menor1) {
+											menor5 = menor4;
+											menor4 = menor3;
+											menor3 = menor2;
+											menor2 = menor1;
+											menor1 = num;
+										} else if (num < menor2) {
+											menor5 = menor4;
+											menor4 = menor3;
+											menor3 = menor2;
+											menor2 = num;
+										} else if (num < menor3) {
+											menor5 = menor4;
+											menor4 = menor3;
+											menor3 = num;
+										} else if (num < menor4) {
+											menor5 = menor4;
+											menor4 = num;
+										}
+										num = sorteio.nextInt(60);
+										while (num == menor1 || num == menor2 || num == menor3 || num == menor4 || num == menor5 || num == 0) {
+											num = sorteio.nextInt(60);
+										}
+										menor6 = num;
+										if (num < menor1) {
+											menor6 = menor5;
+											menor5 = menor4;
+											menor4 = menor3;
+											menor3 = menor2;
+											menor2 = menor1;
+											menor1 = num;
+										} else if (num < menor2) {
+											menor6 = menor5;
+											menor5 = menor4;
+											menor4 = menor3;
+											menor3 = menor2;
+											menor2 = num;
+										} else if (num < menor3) {
+											menor6 = menor5;
+											menor5 = menor4;
+											menor4 = menor3;
+											menor3 = num;
+										} else if (num < menor4) {
+											menor6 = menor5;
+											menor5 = menor4;
+											menor4 = num;
+										} else if (num < menor5) {
+											menor6 = menor5;
+											menor5 = num;
+										}
+										System.out.println("Números da sorte são:");
+										System.out.println(" ");
+										System.out.println("-----------------------");
+										System.out.println("   " + menor1 + " " + menor2 + " " + menor3 + " " + menor4 + " " + menor5 + " " + menor6+"  ");
+										System.out.println("-----------------------");
+										System.out.println(" ");
+										System.out.println("Feito por: Gelmir Elias Baumgratz Filho");
+									}
+								}
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-4">
+                    <div class="project_details_widget">
+                        <div class="single_project_details_widget">
+                            <span class="ti-time"></span>
+                            <h5>Feito em:</h5>
+                            <h6>13-05-19</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- final projeto -->
+
+    <footer class="copyright_part">
+        <div class="container">
+            <div class="row align-items-center">
+                <p class="footer-text m-0 col-lg-8 col-md-12"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="ti-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+                <div class="col-lg-4 col-md-12 text-center text-lg-right footer-social">
+                    <a href="https://www.facebook.com/gelmirelias.baumgratz"><i class="ti-facebook"></i></a>
+                    <a href="https://twitter.com/gelmir_123"> <i class="ti-twitter"></i> </a>
+                    <a href="https://www.instagram.com/gelmir_baumgratz/?hl=pt-br"><i class="ti-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer part end-->
+
+    <!-- jquery plugins here-->
+    <!-- jquery -->
+    <script src="js/jquery-1.12.1.min.js"></script>
+    <!-- popper js -->
+    <script src="js/popper.min.js"></script>
+    <!-- bootstrap js -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- easing js -->
+    <script src="js/jquery.magnific-popup.js"></script>
+    <!-- swiper js -->
+    <script src="js/swiper.min.js"></script>
+    <!-- swiper js -->
+    <script src="js/masonry.pkgd.js"></script>
+    <!-- particles js -->
+    <script src="js/owl.carousel.min.js"></script>
+    <!-- swiper js -->
+    <script src="js/slick.min.js"></script>
+    <!-- custom js -->
+    <script src="js/custom.js"></script>
+
+
+
+</body>
+
+</html>

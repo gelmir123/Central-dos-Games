@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Central dos Games</title>
+    <link rel="icon" href="img/pac.png">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- animate CSS -->
+    <link rel="stylesheet" href="css/animate.css">
+    <!-- owl carousel CSS -->
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <!-- themify CSS -->
+    <link rel="stylesheet" href="css/themify-icons.css">
+    <!-- flaticon CSS -->
+    <link rel="stylesheet" href="css/flaticon.css">
+    <!-- font awesome CSS -->
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <!-- swiper CSS -->
+    <link rel="stylesheet" href="css/slick.css">
+    <!-- style CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!--::menu começo::-->
+    <header class="main_menu">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-12">
+                    <nav class="navbar navbar-expand-lg navbar-light">
+                        <a class="navbar-brand" href="index.html"> </a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                        <div class="collapse navbar-collapse main-menu-item justify-content-end"
+                            id="navbarSupportedContent">
+                            <ul class="navbar-nav">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="index.html">Página Inicial </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="about.html">Sobre nós</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="blog.html">
+                                        Notícias
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="blog.html">Blog</a>
+                                        <a class="dropdown-item" href="single-blog.html">Single blog</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="project.html">
+                                        Projetos
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="project.html">Project</a>
+                                        <a class="dropdown-item" href="project_details.html">Project Details</a>
+                                        <a class="dropdown-item" href="service.html">Services</a>
+                                        <a class="dropdown-item" href="elements.html">Elements</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="contact.html">Fale conosco</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- menu final-->
+
+    <!-- banner texto começo-->
+    <section class="breadcrumb breadcrumb_bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="breadcrumb_iner text-center">
+                        <div class="breadcrumb_iner_item">
+                            <h2>Projeto Elevador</h2>
+                            <p>Projetos<span>-</span>Códigos</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- banner texto final-->
+
+    <!-- começo projeto -->
+    <section class="project_details">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 col-sm-12">
+                    <div class="project_details_img">
+                        <img src="img/elevador.jpg" alt="single_project">
+                    </div>
+                </div>
+                <div class="col-lg-7 col-sm-8">
+                    <div class="project_details_content">
+                        <h3>Consiste basicamente em um simulador de elevador</h3>
+                        <p>Como em um elevador normal, ele tem algumas regras lógicas, não podendo trocar de andar
+                            caso as portas estiverem abertas, e nem se tiver acima do limite de pessoas. Para entrar
+                            pessoas a porta deve está aberta. O prédio tem 15 andares e o limite de pessoas é 10.
+                        </p>
+                        <h4>Código Principal</h4>
+                        <p>import java.util.Scanner;
+
+                            public class Principal {
+                                public static void main(String[] args) {
+                                    ClasseEMetodo elevador = new ClasseEMetodo();
+                                    elevador.andarAtual=0;
+                                    elevador.pessoasAtual=0;
+                                    elevador.porta=1;
+                                    
+                                    elevador.pessoas=10;
+                                    elevador.andares=15;
+                                
+                                    Scanner scan = new Scanner(System.in);
+                                    int menu=0;
+                                    System.out.println("Status Atual do Elevador");
+                                    elevador.status();
+                                    while(menu!=7) {
+                                        System.out.println(" ");
+                                        System.out.println("Digite a açăo desejada");
+                                        System.out.println(" ");
+                                        System.out.println("1 - Mover elevador");
+                                        System.out.println("2 - Abrir porta");
+                                        System.out.println("3 - Fechar porta");
+                                        System.out.println("4 - Entrar pessoas");
+                                        System.out.println("5 - Sair pessoas");
+                                        System.out.println("6 - Status Atual do elevador");
+                                        System.out.println("7 - Sair do programa");
+                                        menu = scan.nextInt();
+                                        
+                                        if(menu==1) {
+                                            if(elevador.porta==2) {	
+                                                System.out.println("Digite o andar que o elevador vai");
+                                                int valor = scan.nextInt();
+                                                elevador.moverElevadorPara(valor);
+                                            }else {
+                                                System.err.println("Movimentaçăo inválida, porta está aberta");
+                                            }
+                                        }
+                                        else if(menu==2) {
+                                            elevador.abrirPorta();
+                                        }
+                                        else if(menu==3) {
+                                            elevador.fecharPorta();
+                                        }
+                                        else if(menu==4) {
+                                            System.out.println("Digite a quantidade de pessoas que irăo entrar");
+                                            int valor = scan.nextInt();
+                                            elevador.entrarPessoas(valor);
+                                        }
+                                        else if(menu==5) {
+                                            if(elevador.porta==1 && elevador.pessoasAtual!=0) {	
+                                                System.out.println("Digite a quantidade de pessoas que irăo sair");
+                                                int valor = scan.nextInt();
+                                                elevador.sairPessoas(valor);
+                                            }else if(elevador.porta==2){
+                                                System.err.println("Movimentaçăo inválida, porta está fechada");
+                                            }else if(elevador.pessoasAtual==0) {
+                                                System.err.println("Movimentaçăo inválida, elevador está vázio");
+                                            }
+                                        }
+                                        else if(menu==6) {
+                                            elevador.status();
+                                        }
+                                        else if(menu==7) {
+                                            System.out.println("Programa finalizado");
+                                            scan.close();
+                                        }
+                                        else {
+                                            System.err.println("Número inválido");
+                                        }
+                                    }
+                                }
+                            } </p>
+                            <h4>Métodos</h4>
+                            <p>public class ClasseEMetodo {
+                                int pessoas=10, andares=15;
+                                int pessoasAtual=0, andarAtual=0;
+                                int porta=1;
+                            
+                                void moverElevadorPara(int valor) {
+                                    if(andarAtual<=andares && porta==2 && valor<=15) {
+                                        andarAtual = valor;
+                                        System.out.println("Elevador agora está no: "+valor+" andar");
+                                    }else if(porta==1) {
+                                        System.err.println("Movimentaçăo inválida, porta está aberta");
+                                    }else {
+                                        System.err.println("Movimentaçăo inválida, prédio năo possui esse andar");
+                                    }
+                                }
+                                
+                                //se 1 porta aberta se 2 porta fechada
+                                void abrirPorta() {
+                                    porta=1;
+                                }
+                                
+                                void fecharPorta() {
+                                    porta=2;
+                                }
+                                
+                                void pessoasAtual() {
+                                    System.out.println(pessoasAtual);
+                                }
+                                
+                                void entrarPessoas(int valor) {
+                                    if(porta==1 && valor+pessoasAtual<=10) {
+                                        pessoasAtual += valor;
+                                        System.out.println("Elevador possui: "+valor+" nova(s) pessoa(s)");
+                                    }else if(porta==2) {
+                                        System.err.println("Movimento inválido, porta está fechada");
+                                    }else {
+                                        System.err.println("Limite de pessoas atingindo");
+                                    }
+                                }
+                                
+                                void sairPessoas(int valor) {
+                                    if(porta==1 && pessoasAtual!=0 && valor<=pessoasAtual) {
+                                        pessoasAtual -= valor;
+                                        System.out.println("Saiu do elevador: "+valor+" pessoa(s)");
+                                    }else if(porta == 2){
+                                        System.err.println("Movimentaçăo inválida, porta fechada");
+                                    }else if(pessoasAtual==0){
+                                        System.err.println("Movimentaçăo inválida, elevador está vázio");
+                                    }else if(valor>pessoasAtual) {
+                                        System.err.println("Năo existe tantas pessoas no elevador");
+                                    }
+                                }
+                                
+                                void status() {
+                                    System.out.println(" ");
+                                    System.out.println("O elevador tem: "+pessoasAtual+" pessoa(s)");
+                                    if(porta==1) {
+                                        System.out.println("Porta: aberta");
+                                    }else {
+                                        System.out.println("Porta: fechada");
+                                    }
+                                    System.out.println("O andar atual é: "+andarAtual);
+                                }
+                                
+                            }
+                            
+                            
+                            </p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-4">
+                    <div class="project_details_widget">
+                        <div class="single_project_details_widget">
+                            <span class="ti-time"></span>
+                            <h5>Feito em:</h5>
+                            <h6>03-06-19</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- final projeto -->
+    <!-- começo rodapé-->
+    <footer class="copyright_part">
+        <div class="container">
+            <div class="row align-items-center">
+                <p class="footer-text m-0 col-lg-8 col-md-12"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="ti-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+                <div class="col-lg-4 col-md-12 text-center text-lg-right footer-social">
+                    <a href="https://www.facebook.com/gelmirelias.baumgratz"><i class="ti-facebook"></i></a>
+                    <a href="https://twitter.com/gelmir_123"> <i class="ti-twitter"></i> </a>
+                    <a href="https://www.instagram.com/gelmir_baumgratz/?hl=pt-br"><i class="ti-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- final rodapé-->
+
+    <!-- jquery plugins here-->
+    <!-- jquery -->
+    <script src="js/jquery-1.12.1.min.js"></script>
+    <!-- popper js -->
+    <script src="js/popper.min.js"></script>
+    <!-- bootstrap js -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- easing js -->
+    <script src="js/jquery.magnific-popup.js"></script>
+    <!-- swiper js -->
+    <script src="js/swiper.min.js"></script>
+    <!-- swiper js -->
+    <script src="js/masonry.pkgd.js"></script>
+    <!-- particles js -->
+    <script src="js/owl.carousel.min.js"></script>
+    <!-- swiper js -->
+    <script src="js/slick.min.js"></script>
+    <!-- custom js -->
+    <script src="js/custom.js"></script>
+
+
+
+</body>
+
+</html>
